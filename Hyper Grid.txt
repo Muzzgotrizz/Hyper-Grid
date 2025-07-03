@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyper Grid</title>
+  <style>
+    :root {
+      --bg-dark: #0B0F1A;
+      --section-dark: #121826;
+      --section-darker: #0A0D18;
+      --card-dark: #1C2431;
+      --accent-blue: #007ACC;
+      --accent-light: #1A73E8;
+      --text-light: #E0F2FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-light));
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-hg {
+      background: linear-gradient(45deg, var(--accent-blue), var(--accent-light));
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav {
+      background-color: var(--section-darker);
+      padding: 0.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      border-top: 1px solid var(--accent-blue);
+      border-bottom: 1px solid var(--accent-blue);
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--accent-blue);
+      color: white;
+    }
+
+    section {
+      background-color: var(--section-dark);
+      padding: 2rem 1rem;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--section-darker);
+    }
+
+    section h2 {
+      text-align: center;
+      color: var(--accent-light);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-blue);
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .game-card {
+      background-color: var(--card-dark);
+      border: 1px solid var(--accent-blue);
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+      border-color: var(--accent-light);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--accent-blue);
+    }
+
+    .game-card a {
+      display: block;
+      padding: 0.5rem;
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: bold;
+    }
+
+    .game-card a:hover {
+      color: var(--accent-light);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--section-darker);
+      color: #99BBEE;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-hg">HG</div>
+    <h1>Hyper Grid</h1>
+  </div>
+  <p>Your gateway to fun and adventure!</p>
+</header>
+
+<nav>
+  <a href="#car-games">Cars</a>
+  <a href="#girls-games">Girls</a>
+  <a href="#shooting-games">Shooting</a>
+  <a href="#ludo">Ludo</a>
+  <a href="#racing">Racing</a>
+</nav>
+
+<section id="car-games">
+  <h2>🚗 Car Games (5)</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="https://gamemonetize.com/traffic-racer-html5-game" target="_blank">
+        <img src="https://img.gamemonetize.com/traffic-racer.jpg" alt="Traffic Racer">
+        Traffic Racer
+      </a>
+    </div>
+    <!-- Add 4 more car games here -->
+  </div>
+</section>
+
+<section id="girls-games">
+  <h2>👧 Girls Games (10)</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="https://www.girlsgoGames.com/game/cooking-fast-4" target="_blank">
+        <img src="https://img.gamemonetize.com/cooking-fast.jpg" alt="Cooking Fast">
+        Cooking Fast 4
+      </a>
+    </div>
+    <!-- Add 9 more girls games here -->
+  </div>
+</section>
+
+<section id="shooting-games">
+  <h2>🔫 Shooting Games (3D / Open World)</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/pixel-gun-apocalypse-3" target="_blank">
+        <img src="https://images.crazygames.com/pixel-gun-apocalypse-3.jpg" alt="Pixel Gun">
+        Pixel Gun Apocalypse 3
+      </a>
+    </div>
+    <!-- Add 2 more shooting games -->
+  </div>
+</section>
+
+<section id="ludo">
+  <h2>🎲 Ludo (1–4 players, AI)</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="https://ludo-king.com/play-online" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Ludo_King_logo.png" alt="Ludo King">
+        Play Ludo Online
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="racing">
+  <h2>🏁 Racing Game</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <a href="https://www.crazygames.com/game/speed-racing-pro-2" target="_blank">
+        <img src="https://images.crazygames.com/speed-racing-pro-2.jpg" alt="Speed Racing Pro 2">
+        Speed Racing Pro 2
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Hyper Grid. All rights reserved.
+</footer>
+
+</body>
+</html>
